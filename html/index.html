@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../script.js" defer></script>
+    <title>ほころび official saite</title>
+  </head>
+
+  <body>
+    <div class="sticky-wrapper">
+      
+      <header class="site-header">
+        <h1 class="logo">
+          <a href="../html/index.html">
+            <img src="../img/log.img/eigo-hiragana.log.png" alt="ロゴ" />
+          </a>
+        </h1>
+      </header> 
+
+
+
+
+
+      <div class="site-content">
+        <main class="main-content">
+          <div class="a-sya">
+            <img
+              src="../img/hokorobi-kannsei/fast.jpeg"
+              alt="モノクロほころびメンバー"
+              class="img-mono slider-img"
+            />
+            <img
+              src="../img/hokorobi-kannsei/fast1-1.jpeg"
+              alt="カラーほころびメンバー"
+              class="img-color slider-img"
+            />
+          </div>
+
+          <nav class="navi">
+            <ul>
+
+              <li><a href="./plofile.html">PLOFILE</a></li>
+              <li><a href="./store.html">STORE</a></li>
+              <li><a href="./live.html">LIVE</a></li>
+              <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const imgColor = document.querySelector(".img-color");
+        const aSya = document.querySelector(".a-sya");
+        const body = document.body;
+        const scrollY = window.scrollY;
+
+        const startFadeIn = 100;
+        const endFadeIn = 700;
+        const startFadeOut = 950;
+        const endFadeOut = 1500;
+
+        if (scrollY > startFadeIn) {
+          body.classList.add("bg-white");
+        } else {
+          body.classList.remove("bg-white");
+        }
+
+        if (scrollY < startFadeIn) {
+          imgColor.style.opacity = 0;
+        } else if (scrollY >= startFadeIn && scrollY <= endFadeIn) {
+          let progress = (scrollY - startFadeIn) / (endFadeIn - startFadeIn);
+          imgColor.style.opacity = progress;
+        } else if (scrollY > endFadeIn && scrollY < startFadeOut) {
+          imgColor.style.opacity = 1; 
+        }
+
+        if (scrollY <= startFadeOut) {
+          aSya.style.opacity = 1;
+          aSya.style.transform = "translateY(0px) scale(1)";
+        } else if (scrollY > startFadeOut && scrollY <= endFadeOut) {
+          let fadeOutProgress =
+            (scrollY - startFadeOut) / (endFadeOut - startFadeOut);
+          aSya.style.opacity = 1 - fadeOutProgress;
+
+          aSya.style.transform = `translateY(-${
+            fadeOutProgress * 60
+          }px) scale(${1 - fadeOutProgress * 0.015})`;
+        } else {
+          aSya.style.opacity = 0;
+        }
+      });
+    </script>
+
+    <section id="music" class="music-section">
+      <h2 class="section-title fade-in-target">MUSIC</h2>
+
+      <div class="music-content fade-in-target delay-1">
+        <div class="music-jacket">
+          <a href="../store/fossli.html"><img src="../img/album-kannsei/Fossile.png" alt="新アルバム" /></a>
+        </div>
+
+        <div class="music-info">
+          <p class="info-type">Album</p>
+          <h3 class="info-title">Fossil light</h3>
+          <p class="info-date">2026.09.09</p>
+        </div>
+      </div>
+
+      <div class="music-footer fade-in-target delay-2">
+        <a href="../store/fossli.html" class="btn-all">全表示</a>
+      </div>
+    </section>
+
+        <section id="store" class="goods-section">
+      <h2 class="section-title-goods fade-in-target">GOODS</h2>
+
+      <div class="goods-list">
+
+        <!-- 1つ目の商品 -->
+        <div class="goods-item fade-in-target delay-1">
+          <div class="goods-frame">
+            <a href="../store/fossli.tokubetu.html"><img src="../img/album-kannsei/alubum-tokubetu.png" alt="LP1" /></a>
+          </div>
+          <a href="../store/fossli.tokubetu.html"><p class="goods-name">Fossil light - Deluxe LP (Gatefold)</p></a>
+        </div>
+
+        <!-- 2つ目の商品 -->
+        <div class="goods-item fade-in-target delay-2">
+          <div class="goods-frame">
+            <a href="../store/fossli.html"><img src="../img/album-kannsei/album1-1.png" alt="LP1-1" /></a>
+          </div>
+          <a href="../store/fossli.html"><p class="goods-name">Fossil light - LP</p></a>
+        </div>
+
+        <!-- 3つ目の商品 -->
+        <div class="goods-item fade-in-target delay-3">
+          <div class="goods-frame">
+            <a href="../store/fossli.cd.html"><img src="../img/album-kannsei/album-CD.png" alt="CD" /></a>
+          </div>
+          <a href="../store/fossli.cd.html"><p class="goods-name">Fossil light - CD</p></a>
+        </div>
+      </div>
+
+      <div class="goods-footer fade-in-target delay-4">
+        <a href="./store.html" class="btn-all">全表示</a>
+      </div>
+    </section>
+
+     <section id="live" class="live-section">
+      <h2 class="section-title-live fade-in-target">LIVE</h2>
+
+      <div class="live-flex-wrapper">
+        
+        <div class="live-content fade-in-target delay-1">
+          <div class="live-poster">
+            <img src="../img/furaiya-kannsei/tua-.png" alt="ツアー" />
+          </div>
+        </div>
+
+        <div class="live-info-list fade-in-target delay-2">
+          
+          <div class="live-info-item">
+            <h3 class="live-info-title">
+              大阪・味園ユニバース ツアーファイナルの詳細解禁
+            </h3>
+            <p class="liveinfo-text">
+              ツアーファイナルとなる味園ユニバース公演のオフィシャル先行受付がスタート。<br />会場限定グッズの先行販売も実施予定です。
+            </p>
+          </div>
+          
+          <div class="live-info-item">
+            <h3 class="live-info-title">野外フェス「森道市場 2026」出演決定</h3>
+            <p class="liveinfo-text">
+              森道市場の出演が決定しました。<br />
+              今回はアコースティック編成でのライブを予定しています。
+            </p>
+          </div>
+          
+          <div class="live-info-item">
+            <h3 class="live-info-title">
+              全国4都市を巡る「Hokorobi Tour 2026」開催決定
+            </h3>
+            <p class="liveinfo-text">
+              ニューアルバムのリリースを記念したワンマンツアーが10月よりスタート。<br />
+              東京・名古屋・京都・大阪の４会場を巡ります。
+            </p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="live-footer fade-in-target delay-3">
+        <a href="./live.html" class="btn-all">全表示</a>
+      </div>
+    </section>
+
+
+     <section id="FC" class="fc-section">
+      <div class="fc-border fc-border-top"></div>
+
+
+      <div class="fc-container fade-in-target delay-1">
+        <div class="fc-left-content">
+          <h2 class="fc-title">ほころび Office Fun Club</h2>
+
+          <div class="fc-text-block">
+            <p>
+              ライブチケットの最速先行受付や、ここでしか見られないメンバーのオフショット、限定ラジオなどをひっそりと更新しています。
+            </p>
+            <p>
+              限定イベントへのご紹介など、特別なコンテンツをお楽しみいただけます。
+            </p>
+          </div>
+        </div>
+
+        <div class="fc-illustration">
+          <img src="../img/log.img/hosisann.png" alt="ファンクラブイラスト" />
+        </div>
+      </div>
+
+      <div class="fc-buttons fade-in-target delay-2">
+        <a href="#" class="btn-submit">申し込む</a>
+        <a href="#" class="btn-login">ログイン</a>
+      </div>
+
+      <div class="fc-border fc-border-bottom"></div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="store.html">STORE</a></li>
+          <li><a href="live.html">LIVE</a></li>
+          <li><a href="plofile.html">PROFILE</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-logo">
+          <a href="../html/index.html"><img src="../img/log.img/hiragana.log.png" alt="" /></a>
+        </div>
+
+        <div class="footer-sns">
+          <a href="#"
+            ><img src="../img/log.img/apple music.png" alt="Apple music"
+          /></a>
+          <a href="#"><img src="../img/log.img/Spotify.png" alt="Spotify" /></a>
+          <a href="#"
+            ><img src="../img/log.img/insta.png" alt="インスタグラム"
+          /></a>
+          <a href="#"><img src="../img/log.img/YouTube.png" alt="YouTube" /></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copylight">
+          <a href="#">利用規約</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Cookie settings</a>
+          <span>© 2026 hokorobi</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
