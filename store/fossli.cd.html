@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>ほころび official saite -Fossil light - CD</title>
+  </head>
+
+  <body>
+    <!-- 共通ヘッダー -->
+    <div class="live-sticky-header-wrap visible">
+      <header class="site-header-common">
+        <h1 class="logo-common">
+          <a href="../html/index.html"
+            ><img src="../img/log.img/hiragana.log.png" alt="ほころび"
+          /></a>
+        </h1>
+        <nav class="header-nav-common">
+          <ul>
+            <li><a href="../html/store.html">STORE</a></li>
+            <li><a href="../html/live.html">LIVE</a></li>
+            <li><a href="../html/plofile.html">PROFILE</a></li>
+            <li><a href="../html/contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <main class="product-page-detail-main">
+      <nav class="breadcrumb-nav">
+        <a href="../html/store.html">Top</a>
+        <span>/</span>
+        <span class="current-item"> Fossil light - CD</span>
+      </nav>
+
+      <div class="product-detail-container">
+        <div class="product-detail-image-wrap">
+          <div class="main-image-box">
+            <img
+              src="../img/album-kannsei/album-CD.png"
+              alt="lp"
+              id="main-img"
+            />
+          </div>
+
+          <div class="thumb-box">
+            <img
+              src="../img/album-kannsei/Fossile.png"
+              alt="lp"
+              class="thumb"
+            />
+            <img
+              src="../img/album-kannsei/album-CD.png"
+              alt="lp"
+              class="thumb"
+            />
+          </div>
+        </div>
+
+        <div class="product-detail-info-wrap">
+          <h1 class="detail-product-name">Fossil light - CD</h1>
+
+          <div class="detail-product-price">
+            <span class="price-amount">¥ 3,000</span>
+            <span class="price-tax">- Tax in</span>
+          </div>
+
+          <div class="purchase-action-area">
+            <div class="quantity-counter">
+              <button type="button" class="qty-btn minus">-</button>
+              <input type="number" class="qty-input" value="1" min="1" />
+              <button type="button" class="qty-btn plus">+</button>
+            </div>
+
+            <button type="button" class="add-to-cart-btn">
+              カートに入れる
+            </button>
+          </div>
+
+          <div class="stock-status-area">
+            <span class="stock-label">在庫状況</span>
+            <div class="stock-indicator">
+              <span class="stock-icon">○</span>
+              <span class="stock-text">在庫あり</span>
+            </div>
+          </div>
+
+          <div class="product-description-text-area">
+            <p class="desc-paragraph">
+              5人組フォークロックバンド「ほころび」が織りなす、温かくも幻想的なサウンドスケープを収めた待望のアナログ盤。<br />
+              暗闇の奥から差し込むひとすじの光のように、繊細なピアノの旋律と、土臭く美しいバンドアンサンブルが深く溶け合います。
+              レコードならではの、空気感を含んだ豊かな音の鳴りをお楽しみください。<br />
+            </p>
+
+            <p class="desc-spec">
+              フォーマット：CD 仕様：ジュエルケース仕様 / 歌詞ブックレット付属
+              収録：全10曲収録
+            </p>
+
+            <p class="desc-notice">
+              ※お客様都合による商品の返品や交換はお受けできません。あらかじめご了承ください。
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" data-bg="#ffffff">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="../html/store.html">store</a></li>
+            <li><a href="../html/live.html">live</a></li>
+            <li><a href="../html/plofile.html">profile</a></li>
+            <li><a href="../html/contact.html">contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-logo">
+          <img src="../img/log.img/hkrbitiba.png" alt="ほころび市場" />
+        </div>
+
+        <div class="footer-sns">
+          <a href="#"
+            ><img src="../img/log.img/apple music.png" alt="Apple music"
+          /></a>
+          <a href="#"><img src="../img/log.img/Spotify.png" alt="Spotify" /></a>
+          <a href="#"
+            ><img src="../img/log.img/insta.png" alt="インスタグラム"
+          /></a>
+          <a href="#"><img src="../img/log.img/YouTube.png" alt="YouTube" /></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copylight">
+          <a href="#">利用規約</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Cookie settings</a>
+          <span>© 2026 hokorobi</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <script>
+      const thumbs = document.querySelectorAll(".thumb");
+      const mainImg = document.getElementById("main-img");
+
+      thumbs.forEach((thumb) => {
+        thumb.addEventListener("mouseover", () => {
+          mainImg.src = thumb.src;
+        });
+      });
+    </script>
+  </body>
+</html>
